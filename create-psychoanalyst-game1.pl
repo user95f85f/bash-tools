@@ -2,15 +2,33 @@
 
 use warnings;
 use strict;
+use List::Util qw/shuffle/;
 use feature 'say';
 
 open my ${f}, '>', 'out.html';
 
-print $f <<'EOF';
+my @out = (
+'kill monster',
+'get loot',
+'get points',
+'get new skills',
+'get health points',
+'get stronger attacks',
+'get gold/silver/copper/gil/coins',
+'get better items',
+'kill a player'
+);
+@out = shuffle(@out);
+my $out2 = '';
+foreach my $i (@out){
+  $out2 = $out2 . 'out+=\'<button>' . $i . ' any way, shape, form, or how</button>\' + "\n";';
+}
+
+print $f <<'EOF1';
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8" />
-<title>psychoanalyzism game1</title>
+<title>psych-game1</title>
 <script language="javascript" type="text/javascript">
 var experience = 0;
 var gil = 0;
@@ -22,13 +40,13 @@ function game_clicked(_letter){
 go('txtOut').value += _letter;
 }
 function btnPlay_clicked(){
-var out='<button>kill monster any way, shape, form, or how</button>' + "\n";
-out+='<button>get loot any way, shape, form, or how</button>' + "\n";
-out+='<button>get points any way, shape, form, or how</button>' + "\n";
-out+='<button>get gold/silver/copper/gil/coins any way, shape, form, or how</button>' + "\n";
-out+='<button>get better items any way, shape, form, or how</button>' + "\n";
-out+='<button>kill a player any way, shape, form, or how</button>';
-out+='<br /><br />notes:<br /><textarea style="width:100%" rows="19"></textarea>';
+var out='';
+EOF1
+
+say $f $out2;
+
+print $f <<'EOF2';
+out+='<br />notes:<br /><textarea style="width:100%" rows="19"></textarea>';
 go('divGame').innerHTML = out;
 }
 function body_loaded(){
@@ -46,5 +64,5 @@ function body_loaded(){
 </div>
 </body>
 </html>
-EOF
+EOF2
 close($f);

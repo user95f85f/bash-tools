@@ -46,6 +46,7 @@ EOF1
 say $f $out2;
 
 print $f <<'EOF2';
+out+='<button>quit</button>' + "\n";
 out+='<br />notes:<br /><textarea style="width:100%" rows="19"></textarea>';
 go('divGame').innerHTML = out;
 }

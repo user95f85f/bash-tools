@@ -41,6 +41,9 @@ go('txtOut').value += _letter;
 }
 function btnPlay_clicked(){
 var out='';
+out+='<button>go back</button>' + "\n";
+out+='<input type="text" value="do something else" size="30" /> <button>act</button>' + "\n";
+out+='<button>78%quit programming</button>' + "\n";
 EOF1
 
 say $f $out2;

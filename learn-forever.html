@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head><title>learning</title>
+<script type="text/javascript" language="javascript">
+var d = document;
+function go(_s){
+return d.getElementById(_s);
+}
+function body_onloaded(){}
+function getColour(){
+var r = Math.random();
+if(r < 0.2)
+  return 'pink';
+if(r < 0.3)
+  return 'aqua';
+if(r < 0.43)
+  return 'purple'
+if(r < 0.52)
+  return 'black';
+if(r < 0.63)
+  return 'white';
+if(r < 0.71)
+  return 'yellow';
+if(r < 0.82)
+  return 'orange';
+if(r < 0.91)
+  return 'green';
+return 'blue';
+}
+function btnTime_clicked(){
+go('preComputer').style.backgroundColor = getColour();
+go('preBook').style.backgroundColor = getColour();
+go('spanLearning').innerHTML = Math.random()*2.0+0.31;
+}
+</script>
+</head>
+
+<body onload="body_onloaded();">
+<pre>
+<pre id="preComputer">
+|------------------------|
+|                        |
+|     COMPUTER           |
+|------------------------|
+</pre>
+
+||||| |||||
+
+<pre id="preBook">
+|-----|
+|     |
+| BOOK|
+|-----|
+</pre>
+
+<input type="button" value="time+1" onclick="btnTime_clicked()" />
+you are learning: +<span id="spanLearning">2</span>%
+</pre>
+</body>
+</html>

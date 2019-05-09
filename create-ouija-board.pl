@@ -18,7 +18,7 @@ say $f <<EOF;
 who are we communicating with assuming they existed?<br />
 <textarea id="txtWho" rows="3" style="width:100%"></textarea><br />
 what is your question?<br />
-<textarea id="txtWho" rows="3" style="width:100%"></textarea><br />
+<textarea id="txtQuestion" rows="3" style="width:100%"></textarea><br />
 EOF
 my $count = 0;
 for my $letter('a' .. 'z'){

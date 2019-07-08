@@ -33,7 +33,7 @@ body{font-size:1.2em}
 <button onclick="go('b').innerHTML='be a C guru'">be a C guru</button><br />
 <button onclick="go('b').innerHTML='be an HTML5/HTML guru'">be an HTML5/HTML guru</button><br />
 </td><td>
-<a href="#" onclick="this.innerHTML = 'do assignment ' + ++i;return false" id="a">do assignment 1</a>
+<a href="#" onclick="this.innerHTML = 'do assignment ' + ++i;return false">do assignment 1</a>
 </td></tr>
 </table>
 </body>

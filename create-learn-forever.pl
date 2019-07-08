@@ -1,3 +1,13 @@
+#!/usr/bin/perl
+
+use warnings;
+use strict;
+use feature qw/say/;
+
+open my $f, '>', 'out.html' or die $!;
+
+
+say $f <<'EOF';
 <!DOCTYPE html>
 <html>
 <head><title>learning</title>
@@ -74,3 +84,5 @@ you are learning: +<span id="spanLearning">2</span>%
 </pre>
 </body>
 </html>
+EOF
+close($f);

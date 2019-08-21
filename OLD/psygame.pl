@@ -5,7 +5,7 @@ use strict;
 use List::Util qw/shuffle/;
 use feature 'say';
 
-open my ${f}, '>', 'out.html';
+open my ${f}, '>', 'a.html';
 
 my @out = (
 'kill monster',

@@ -5,7 +5,7 @@ use strict;
 use feature qw/say/;
 use List::Util qw/shuffle/;
 
-open my $f, '>', 'out.html' or die $!;
+open my $f, '>', 'a.html' or die $!;
 
 my $t =<<'EOF2';
 <button onclick="go('b').innerHTML=this.innerHTML">be a python guru</button><br />

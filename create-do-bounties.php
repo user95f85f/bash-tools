@@ -3,7 +3,7 @@
 <head lang="en-US">
 <meta charset="utf-8" />
 <!--
-php index.php > index.html
+php create-do-bounties.php > a.html
 -->
 <title>Programming Bounties</title>
 <script>

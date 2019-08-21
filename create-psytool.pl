@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use feature 'say';
 
-open my ${f}, '>', 'out.html' or die $!;
+open my ${f}, '>', 'a.html' or die $!;
 
 
 say $f <<'EOF';
